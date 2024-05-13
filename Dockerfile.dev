@@ -4,6 +4,6 @@ WORKDIR /app
 
 VOLUME [ "/app/node_modules" ]
 
-CMD [ "/bin/sh", "-c", "npm install && npm run dev" ]
+CMD [ "/bin/sh", "-c", "npm install && npm run dev -- --host" ]
 
 EXPOSE 5173
