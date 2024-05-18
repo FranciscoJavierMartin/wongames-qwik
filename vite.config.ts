@@ -58,6 +58,10 @@ export default defineConfig(({ command, mode }): UserConfig => {
         'Cache-Control': 'public, max-age=600',
       },
     },
+    test: {
+      globals: true,
+      setupFiles: ['./vitest.setup.ts']
+    }
   };
 });
 
