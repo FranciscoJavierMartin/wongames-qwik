@@ -1,9 +1,6 @@
 import { component$ } from '@builder.io/qwik';
+import Main from '@/components/Main';
 
 export default component$(() => {
-  return (
-    <main>
-      <h1>Wongames Qwik</h1>
-    </main>
-  );
+  return <Main />;
 });
