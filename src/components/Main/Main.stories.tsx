@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from 'storybook-framework-qwik';
-import Main from '.';
+import Main, { type MainProps } from '.';
 
 const meta: Meta = {
   title: 'Main',
@@ -11,6 +11,6 @@ const meta: Meta = {
 
 export default meta;
 
-export const Default: StoryObj = {
+export const Default: StoryObj<MainProps> = {
   render: (props) => <Main {...props} />,
 };
