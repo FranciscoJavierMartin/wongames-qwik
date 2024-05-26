@@ -1,6 +1,7 @@
 {
   "name": "wongames-qwik",
   "description": "Wongames Qwik",
+  "license": "MIT",
   "engines": {
     "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
   },
@@ -13,6 +14,7 @@
   "type": "module",
   "scripts": {
     "build": "qwik build",
+    "build-storybook": "storybook build",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.types": "tsc --incremental --noEmit",
@@ -24,21 +26,42 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
+    "storybook": "storybook dev -p 6006 --no-open --disable-telemetry",
+    "template": "plop --plopfile generators/plopfile.cjs",
+    "test:unit": "vitest run components",
+    "test:unit.ui": "vitest --ui components",
     "qwik": "qwik"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.5.4",
     "@builder.io/qwik-city": "^1.5.4",
+    "@storybook/addon-essentials": "^7.4.6",
+    "@storybook/addon-links": "^7.4.6",
+    "@storybook/blocks": "^7.4.6",
+    "@storybook/builder-vite": "^7.4.6",
+    "@storybook/html": "^7.4.6",
+    "@storybook/html-vite": "^7.4.6",
+    "@testing-library/jest-dom": "^6.4.5",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
+    "@vitest/ui": "^0.34.6",
+    "autoprefixer": "^10.4.14",
     "eslint": "^8.57.0",
     "eslint-plugin-qwik": "^1.5.4",
+    "eslint-plugin-storybook": "^0.8.0",
+    "plop": "^4.0.1",
+    "postcss": "^8.4.31",
     "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "storybook": "^7.4.6",
+    "storybook-framework-qwik": "^0.2.4",
+    "tailwindcss": "3.3.3",
     "typescript": "5.4.5",
     "undici": "*",
     "vite": "^5.2.10",
-    "vite-tsconfig-paths": "^4.2.1"
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
   }
 }

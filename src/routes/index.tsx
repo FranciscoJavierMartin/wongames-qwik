@@ -1,9 +1,6 @@
 import { component$ } from '@builder.io/qwik';
+import Logo from '@/components/Logo';
 
 export default component$(() => {
-  return (
-    <main>
-      <h1>Hello world</h1>
-    </main>
-  );
+  return <Logo />;
 });

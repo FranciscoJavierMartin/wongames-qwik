@@ -58,6 +58,11 @@ export default defineConfig(({ command, mode }): UserConfig => {
         'Cache-Control': 'public, max-age=600',
       },
     },
+    test: {
+      css: true,
+      globals: true,
+      setupFiles: ['./vitest.setup.ts'],
+    },
   };
 });
 
@@ -70,12 +75,12 @@ export default defineConfig(({ command, mode }): UserConfig => {
  */
 function errorOnDuplicatesPkgDeps(
   devDependencies: PkgDep,
-  dependencies: PkgDep
+  dependencies: PkgDep,
 ) {
   // Create an array 'duplicateDeps' by filtering devDependencies.
   // If a dependency also exists in dependencies, it is considered a duplicate.
   const duplicateDeps = Object.keys(devDependencies).filter(
-    (dep) => dependencies[dep]
+    (dep) => dependencies[dep],
   );
 
   // Format the error message with the duplicates list.
