@@ -61,4 +61,16 @@ describe('<Logo/>', () => {
         ?.classList.contains('h-[5.9rem]'),
     ).toBe(true);
   });
+
+  it('should render a bigger logo without text if hideOnMobile', async () => {
+    const { screen, render } = await createDOM();
+    await render(<Logo hideOnMobile />);
+
+    expect(
+      screen
+        .getElementsByTagName('svg')
+        .item(0)
+        ?.classList.contains('max-md:w-[5.8rem]'),
+    ).toBe(true);
+  });
 });
