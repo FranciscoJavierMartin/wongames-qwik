@@ -28,5 +28,6 @@
     "./*.config.ts",
     "./vitest.setup.ts",
     "./vite.config.ts"
-  ]
+  ],
+  "exclude": ["./generators/plopfile.cjs"]
 }
