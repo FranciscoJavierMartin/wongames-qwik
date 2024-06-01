@@ -17,4 +17,16 @@ describe('<Heading/>', () => {
         ?.classList.contains('text-white'),
     ).toBe(true);
   });
+
+  it('should render a black heading when color is passed', async () => {
+    const { screen, render } = await createDOM();
+    await render(<Heading color='black'>Most populars</Heading>);
+
+    expect(
+      screen
+        .getElementsByTagName('h2')
+        .item(0)
+        ?.classList.contains('text-black'),
+    ).toBe(true);
+  });
 });
