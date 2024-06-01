@@ -29,6 +29,7 @@
     "storybook": "storybook dev -p 6006 --no-open --disable-telemetry",
     "template": "plop --plopfile generators/plopfile.cjs",
     "test:unit": "vitest run components",
+    "test:unit:watch": "vitest components",
     "test:unit.ui": "vitest --ui components",
     "qwik": "qwik"
   },
