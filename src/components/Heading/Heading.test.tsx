@@ -29,4 +29,28 @@ describe('<Heading/>', () => {
         ?.classList.contains('text-black'),
     ).toBe(true);
   });
+
+  it('should render a heading with a line to the left side', async () => {
+    const { screen, render } = await createDOM();
+    await render(<Heading lineLeft>Most populars</Heading>);
+
+    expect(
+      screen
+        .getElementsByTagName('h2')
+        .item(0)
+        ?.classList.contains('border-l-secondary'),
+    ).toBe(true);
+  });
+
+  it('should render a heading with a line at the bottom', async () => {
+    const { screen, render } = await createDOM();
+    await render(<Heading lineBottom>Most populars</Heading>);
+
+    expect(
+      screen
+        .getElementsByTagName('h2')
+        .item(0)
+        ?.classList.contains('after:border-b-primary'),
+    ).toBe(true);
+  });
 });

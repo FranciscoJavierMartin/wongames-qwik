@@ -7,8 +7,7 @@ export type HeadingProps = {
 };
 
 export default component$<HeadingProps>(
-  ({ color = 'white', lineLeft, lineBottom }) => {
-    console.log('Hello', color);
+  ({ color = 'white', lineLeft = false, lineBottom = false }) => {
     return (
       <h2
         class={[
