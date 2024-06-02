@@ -29,6 +29,7 @@
     "storybook": "storybook dev -p 6006 --no-open --disable-telemetry",
     "template": "plop --plopfile generators/plopfile.cjs",
     "test:unit": "vitest run components",
+    "test:unit:watch": "vitest components",
     "test:unit.ui": "vitest --ui components",
     "qwik": "qwik"
   },
@@ -54,7 +55,7 @@
     "plop": "^4.0.1",
     "postcss": "^8.4.31",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.4",
+    "prettier-plugin-tailwindcss": "^0.6.1",
     "storybook": "^7.4.6",
     "storybook-framework-qwik": "^0.2.4",
     "tailwindcss": "3.3.3",

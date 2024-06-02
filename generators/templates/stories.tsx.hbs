@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from 'storybook-framework-qwik';
-import {{pascalCase name}}, { type {{pascalCase name}}Props } from '.';
+import {{pascalCase name}} from '.';
 
 const meta: Meta = {
   title: '{{pascalCase name}}',
@@ -7,10 +7,14 @@ const meta: Meta = {
   parameters: {
     layout: 'fullscreen',
   },
+  tags: ['autodocs'],
+  render: (props) => <{{pascalCase name}} {...props} />,
 };
 
 export default meta;
 
 export const Default: StoryObj<{{pascalCase name}}Props> = {
-  render: (props) => <{{pascalCase name}} {...props} />,
+  args: {
+
+  }
 };
